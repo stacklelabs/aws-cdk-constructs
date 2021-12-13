@@ -28,6 +28,11 @@
   },
   "turbo": {
     "baseBranch": "origin/main",
-    "pipeline": {}
+    "pipeline": {
+      "compile": {},
+      "build": {},
+      "test": {},
+      "package": {}
+    }
   }
 }
