@@ -1,0 +1,24 @@
+lockfileVersion: 5.3
+
+importers:
+
+  .:
+    specifiers:
+      turbo: ^1.0.9
+    devDependencies:
+      turbo: 1.0.9
+
+packages:
+
+  /turbo/1.0.9:
+    resolution: {integrity: sha512-th0vdSpiO0gWQfehhTsG6vDXnq2fRXwvWSy1/LW2PBosv7VGgD2RENRVpjvPCNo7xEnkF6hZXnBfz0Tlvwu32A==}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      zlib: 1.0.5
+    dev: true
+
+  /zlib/1.0.5:
+    resolution: {integrity: sha1-bnyXL8NxxkWmr7A6sUdp3vEU/MA=}
+    engines: {node: '>=0.2.0'}
+    dev: true
