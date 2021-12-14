@@ -49,7 +49,7 @@ jobs:
         with:
           path: |
             .turbo
-            **/*/.turbo
+            **/.turbo
           key: ${{ runner.os }}-${{ github.ref_name }}-${{ hashFiles('**/pnpm-lock.json') }}
       - uses: pnpm/action-setup@v2.0.1
         with:

@@ -5,6 +5,8 @@
     "lib": [
       "es2018"
     ],
+    "outDir": "./dist",
+    "rootDir": "./lib",
     "declaration": true,
     "strict": true,
     "noImplicitAny": true,
@@ -26,5 +28,6 @@
   "exclude": [
     "node_modules",
     "cdk.out"
-  ]
+  ],
+  "include": ["lib"]
 }
