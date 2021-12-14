@@ -45,12 +45,12 @@ jobs:
       - run: git config --global core.autocrlf false
       - uses: actions/checkout@v2
       - name: Get turbo cache directory
-          uses: actions/cache@v2
-          with:
-            path: |
-              .turbo
-              **/*/.turbo
-            key: ${{ runner.os }}-${{ github.ref_name }}
+        uses: actions/cache@v2
+        with:
+          path: |
+            .turbo
+            **/*/.turbo
+          key: ${{ runner.os }}-${{ github.ref_name }}
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 6
