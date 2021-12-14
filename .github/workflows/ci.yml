@@ -13,6 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Get turbo cache directory
+        uses: actions/cache@v2
+        with:
+          path: |
+            .turbo
+            **/*/.turbo
+          key: ${{ runner.os }}-${{ github.ref_name }}
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 6
@@ -30,13 +37,20 @@ jobs:
       fail-fast: true
       matrix:
         node-version: [14]
-        os: [ubuntu-latest, macOS-latest, windows-latest]
+        os: [ubuntu-latest]
         include:
           - node-version: 16
             os: ubuntu-latest
     steps:
       - run: git config --global core.autocrlf false
       - uses: actions/checkout@v2
+      - name: Get turbo cache directory
+          uses: actions/cache@v2
+          with:
+            path: |
+              .turbo
+              **/*/.turbo
+            key: ${{ runner.os }}-${{ github.ref_name }}
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 6
