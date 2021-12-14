@@ -1,0 +1,12 @@
+!*.js
+*.ts
+!*.d.ts
+test
+
+cdk.out
+
+# Exclude jsii outdir
+dist
+
+# Include .jsii
+!.jsii

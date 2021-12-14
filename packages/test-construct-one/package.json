@@ -1,0 +1,29 @@
+{
+  "name": "@stackle-cdk/test-construct-one",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup lib/index.ts --dts",
+    "watch": "tsup lib/index.ts --watch",
+    "lint": "TIMING=1 eslint --fix",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@stackle-cdk/build-config": "*",
+    "@types/jest": "^26.0.10",
+    "@types/node": "10.17.27",
+    "aws-cdk-lib": "2.1.0",
+    "constructs": "^10.0.0",
+    "eslint": "^8.4.1",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.2.0",
+    "tsup": "^5.11.1",
+    "typescript": "~3.9.7"
+  },
+  "peerDependencies": {
+    "aws-cdk-lib": "2.1.0",
+    "constructs": "^10.0.0"
+  }
+}

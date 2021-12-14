@@ -219,3 +219,7 @@ Temporary Items
 
 # Turborepo
 .turbo
+
+
+
+node_modules
