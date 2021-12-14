@@ -18,7 +18,8 @@ jobs:
         with:
           path: |
             .turbo
-            **/*/.turbo
+            **/.turbo
+            packages/**/.turbo
           key: ${{ runner.os }}-${{ github.ref_name }}-${{ github.action }}
       - uses: pnpm/action-setup@v2.0.1
         with:
@@ -50,7 +51,8 @@ jobs:
           path: |
             .turbo
             **/.turbo
-          key: ${{ runner.os }}-${{ github.ref_name }}-${{ hashFiles('**/pnpm-lock.json') }}
+            packages/**/.turbo
+          key: ${{ runner.os }}-${{ github.ref_name }}-${{ matrix.node-version }}
       - uses: pnpm/action-setup@v2.0.1
         with:
           version: 6
