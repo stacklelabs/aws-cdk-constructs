@@ -37,11 +37,10 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        node-version: [12,14,16]
+        node-version: [12,13,14,15,16,17]
         os: [ubuntu-latest]
         architecture: 
           - x64
-          - x86
     steps:
       - run: git config --global core.autocrlf false
       - uses: actions/checkout@v2
